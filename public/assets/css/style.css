@@ -1,0 +1,494 @@
+/* reset defalut settings of browser*/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+
+
+:root{
+ --main: #3b69a4 ; /* main color*/
+ --white: #fff;
+ --grey: #f5f5f5;
+ --black1:#222;
+ --black:#999;
+ --main2:  #2a558f;
+}
+.mainblue{
+    color:var(--main)
+}
+
+select:hover{
+    color:var(--main);
+    border: 1.5px solid var(--main);
+}
+
+select:active{
+    border: 1.5px solid var(--main);
+    outline: none;
+}
+
+select:visited{
+    border: 1.5px solid var(--main);   
+}
+.btn-main{
+    background: #3b69a4;
+    color:white;
+}
+.btn-main:hover{
+    background:white ;
+    color: #3b69a4;
+    border: 2px solid  #3b69a4;
+    border-radius: 5px;
+}
+
+/*  */
+.broderMain{
+    border: 2px dotted #3b69a4;
+}
+/*body  */
+body{
+ min-height: 100wh;
+ overflow-x: hidden;
+ width: 100wh;
+ 
+}
+/* container-fuld */  
+.Appcontainer{
+    position: relative;
+    width: 100%;
+}
+
+/* nav */
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--main);
+    border-right: 10px solid var(--main2) ;
+    transition: 0.5s;
+    overflow:0 ;
+}
+
+.navigation.active{
+  width: 80px !important;
+}
+
+
+.navigation ul {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+
+}
+
+.navigation li:nth-child(1) {
+   margin-bottom: 40px;
+   pointer-events: none;
+}
+
+.heightChart{
+    height: 200px;
+}
+/* hobvr*/
+.navigation  ul li.hovered,
+.navigation  ul li:hover {
+    background: var( --white);
+ }
+
+
+ .navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    color: var(--white);
+    text-decoration: none;
+
+}
+.navigation ul li.hovered a,
+.navigation ul li:hover a{
+color:var(--main)
+}
+.navigation ul li.hovered a::before ,
+.navigation ul li:hover a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background:transparent ;
+   border-radius: 50%;
+   box-shadow: 50px 50px 0px 10px var(--white);
+}
+.navigation ul li.hovered a::after
+.navigation ul li:hover a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left:0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background:transparent ;
+   border-radius: 50%;
+   box-shadow: 50px -50px 0px 10px var(--white);
+}
+
+.navigation ul li:hover a {
+  color:var(--main)
+}
+
+.navigation ul li a .icon {
+   position: relative;
+   display: block;
+   min-width: 60px;
+   height: 60px;
+   line-height: 60px;
+   text-align: center;
+  }
+
+.navigation ul li a .icon ion-icon {
+font-size: 1.75em;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start ;
+    white-space: nowrap;
+   }
+
+   /* main */
+   .main{
+       position: absolute;
+       width: calc(100% - 300px);
+       left: 300px;
+       min-height: 100vh;
+       background: var(--white);
+       transition: 0.5s;
+   }
+   .main.active{
+
+    width: calc(100% - 80px);
+    right:80px;
+}
+
+   .topbar{
+      width: 100%;
+      height: 60px; 
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+   }
+   .toggle{
+     position: relative;
+     top:0;  
+     width:60px ;
+     height: 60px;
+     align-items:center ;
+     font-size: 2.5em;
+     cursor: pointer;
+   }
+   .search{
+       position: relative;
+       width: 400px;
+       margin:  0 10px;
+   }
+
+   .search label{
+       position: relative;
+       width: 100%;
+   }
+   .search label input{
+       width: 100%;
+       height: 40px;
+       border-radius: 40px;
+       padding: 5px 20px;
+       outline: none;
+       border: 1px solid var(--black);
+       font-size: 16px;
+   }
+   .search label ion-icon{
+      position: absolute;
+      top:0;
+      left:10px ; 
+      font-size: 1.2em;
+   }
+   .user{
+       position: relative;
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       overflow: hidden;
+       cursor: pointer;
+       object-fit: cover;
+   }
+.cardBox{
+    position: relative;
+    width:100% ;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap:15px;
+}   
+.cardBox .cardInternal{
+    position: relative;
+    background: var(--white);
+    box-shadow: 0 7px 10px   rgb(189, 211, 217);
+    border-radius: 15px;
+    justify-content: space-between;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+}
+
+.cardBox .cardInternal .number{
+    position: relative;
+    font-weight: 500;
+    font-size: 1.2em;
+    color:var(--main);
+
+}
+.sm-font{
+    font-size: 1em !important;
+}
+
+
+.cardBox .cardInternal .cardName{
+    margin-top: 5px;
+    font-size: 1em;
+    color:var(--black1);
+    font-weight: bold;
+
+}
+
+
+.cardBox .cardInternal .iconBx{
+    font-size: 3.5em;
+    color:var(--main);
+}
+
+
+.iconImg{
+    font-size: 5em;
+    color:var(--main);
+}
+
+.cardBox .cardInternal:hover{
+background-color:var(--main);
+
+}
+.cardBox .cardInternal:hover .iconBx,
+.cardBox .cardInternal:hover .cardName,
+.cardBox .cardInternal:hover .number{
+    color:var(--white);
+}
+
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap:30px;
+    margin-top:10px;
+}
+.details .recentAnalysis{
+    position: relative;
+    width: 100%;
+    display: grid;
+    background: var(--white);
+}
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--main);
+}
+.actionButton{
+    position: relative;
+    padding: 5px 10px;
+    background: var(--main);
+   text-decoration: none;
+   border-radius: 5px;
+    color:var(--white)
+}
+.details .mainTable {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.details .mainTable  thead td {
+    font-weight: 600;
+}
+
+.details .recentAnalysis  .mainTable tr {
+color:var(--black1);
+border-bottom: 1px solid rgb(189, 211, 217);
+}
+
+.searchLebalfix{
+    display: inline;
+}
+.details .recentAnalysis  .mainTable tr:hover {
+    background-color: #20529456;
+    border-bottom: none;
+    }
+
+
+
+
+    .details .recentAnalysis  .mainTable tbody tr:hover.a{
+        color:var(--white);
+    }
+
+.details .recentAnalysis  .mainTable tr td  {
+    padding: 10px;
+    
+    }    
+.status.done{
+    padding: 2px 4px ;
+    background-color: rgb(141, 196, 60);
+    color:var(--white);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.progress{
+    padding: 5px 4px ;
+    background-color: rgb(214, 219, 64);
+    color:var(--white);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    height: fit-content !important;
+}
+
+.status.notstart{
+    padding: 2px 4px ;
+    background-color: rgb(219, 64, 64);
+    color:var(--white);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.downlode{
+    padding: 5px 4px ;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.topcustoemrs{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    box-shadow: 50px -50px 0px 10px var(--white);
+    border-radius: 20px;
+    background: var(--white);
+
+}
+.wid-100px{
+    width: 100px;
+}
+.fit-content{
+    width: fit-content;
+}
+
+@media(max-width:991px){
+ .navigation{
+     right: -300px;
+ }
+ .navigation.active {
+    width: 300px !important;
+    right: 0;
+  }
+ .main{
+     width: 100%;
+     right: 0;
+ }
+ .main.active{
+     right: 300px;
+ }
+
+ .cardBox{
+     grid-template-columns: repeat(2,1fr);
+ }
+}
+
+@media(max-width:768px){
+  .details{
+    grid-template-columns: repeat(1,1fr);
+  } 
+  .recentAnalysis{
+      overflow-x: auto;
+  }
+  .status.done  , .status.notstart , .status.progress{
+    white-space: nowrap;
+  } 
+}
+
+
+
+@media(max-width:480px){
+
+   .cardBox{
+       grid-template-columns: repeat(1,1fr);
+   }
+   .cardHeader{
+       font-size: 20px;
+   }
+   .user{
+       min-width: 40px;
+   }
+   .navigation{
+       width: 100%;
+       right: -100%;
+       z-index: 1000;
+   }
+   .navigation.active{
+    width: 100% !important;
+    right: 0;
+}
+.toggle{
+    z-index: 100001;
+  
+}
+.main.active .toggle{
+    color:#fff;
+    position: absolute;
+    right:100px;
+    top:10px;
+    margin-left: 10px;
+}
+#table_id{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+  }

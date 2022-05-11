@@ -1,41 +1,58 @@
 import React from "react";
 import Chart from "react-apexcharts";
 class Payment_methods extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    series: [],
 
-    this.state = {
-      
-      series: [44, 33, 54, 45],
-
-        options : {
-          labels: [" Apple PAY ", " Cridt Card ", " Cash ", " STC PAY "],
-          chart: {
-          type: 'donut',
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: 'bottom'
-            },
-            
-          }
-        }]
-          }
+    options: {},
   };
-}
 
+  static getDerivedStateFromProps(props, state){
 
+    let data = props.favorite_payment;
 
-    
+    let num = [];
+    let lab = [];
+    if(data != null){
+
+    data.map((e, index) => {
+      num.push(e[0]);
+      lab.push(e[1]);
+    });
+  }
+   return  {
+      series: lab,
+      options: {
+        labels: num,
   
+        chart: {
+          type: "donut",
+        },
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        ],
+      },      
+      showComponent: data!=null?true:false,
+
+    }
+  }
+
+
 
   render() {
     return (
+      <div>
+        {this.state.showComponent ? (
       <div id="chart">
         <h1>Payment Methods</h1>
         <Chart
@@ -45,6 +62,8 @@ class Payment_methods extends React.Component {
           height={350}
         />
       </div>
+              ) : null}
+              </div>
     );
   }
 }

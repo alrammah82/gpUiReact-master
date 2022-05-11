@@ -1,7 +1,50 @@
 import React, { Component } from "react";
+import axios from "axios";
+import ExcelToJson from "./ExcelToJson";
+//  const [result,setResult] = useState(null);
 
 class UploadFile extends Component {
-  state = {};
+  state = {
+    file: "",
+    isFileSelected: false,
+    isFileUploaded: false,
+  };
+
+  onFileChange = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+    this.setState({
+      file: event.target.files[0],
+      isFileSelected: true,
+    });
+  };
+
+  onUploadClick = async (event) => {
+    event.preventDefault();
+    var formData = new FormData();
+
+    formData.append("file", this.state.file, this.state.file.name);
+
+    this.setState({ isFileUploaded: true });
+  };
+
+  async getData(e) {
+    try {
+      e.stopPropagation();
+      e.preventDefault();
+      var formData = new FormData();
+      formData.append("file", this.state.file, this.state.file.name);
+      const res = await axios.post(
+        "http://localhost:8000/store/favorite_payment",
+        formData
+      );
+      const resdata = res.data;
+      console.log(resdata);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   render() {
     return (
       <div className="main">
@@ -10,7 +53,6 @@ class UploadFile extends Component {
             <h2>عمليات التصنيف</h2>
           </div>
         </div>
-
         <div className="row m-4 ">
           <div className="contianer  broderMain">
             <h3 className="m-4 "> نموذج عمليات التصنيف على البيانات </h3>
@@ -29,6 +71,20 @@ class UploadFile extends Component {
                   <option value="2"> بيانات شهر شوال 02/5/2022</option>
                   <option value="3">بيانات شهر ذو القعدة 02/6/2022</option>
                 </select>
+              </div>
+              <div>
+                <input
+                  type="file"
+                  id="file"
+                  onChange={()=> this.onFileChange(this)}
+                />
+                <button
+                  onClick={() => {
+                    this.onUploadClick(this);
+                  }}
+                >
+                  Read File
+                </button>
               </div>
               <div className="col-md-12">
                 <label>اختر التصنيفات المراد تطبيقها على البيانات :</label>

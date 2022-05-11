@@ -7,7 +7,6 @@ import Data from './pages/data';
 import Analysis from './pages/analysis'; 
 import Resluts from './pages/resluts'; 
 import Details from './pages/details'; 
-import UploadFile from './pages/Uploadfile';
 
 import {
   BrowserRouter,
@@ -31,7 +30,7 @@ function App() {
       <Route path="/details" element={<Details />}/>
   </Routes>
   <Routes>
-          <Route path="/" element={<UploadFile />}> </Route>
+          <Route path="/" element={<Details />}> </Route>
 
   </Routes>
 </BrowserRouter>

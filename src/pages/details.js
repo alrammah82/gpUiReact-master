@@ -295,22 +295,16 @@ class Details extends React.Component {
 
           <Tabs className="mt-5">
             <TabList>
-            {this.state.favorite_payment & this.state.daily_sales & this.state.daily_orders & this.state.topCities  != null ? (
 
               <Tab>Store Level</Tab>
-            ): null}
-            {this.state.favorite_payment & this.state.daily_sales & this.state.daily_orders & this.state.topCities  != null ? (
 
               <Tab>Clients Level</Tab>
-              ): null}
 
-              {this.state.favorite_payment & this.state.daily_sales & this.state.daily_orders & this.state.topCities  != null ? (
 
               <Tab>Basket Level</Tab>
               ): null}
 
             </TabList>
-            {this.state.favorite_payment & this.state.daily_sales & this.state.daily_orders & this.state.topCities  != null ? (
 
             <TabPanel>
               <div class="row mt-5">
@@ -443,7 +437,6 @@ class Details extends React.Component {
                 </div>
               </div>
             </TabPanel>              
-            ): null}
 
             <TabPanel>
               <div class="row">

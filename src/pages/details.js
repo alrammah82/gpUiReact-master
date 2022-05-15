@@ -302,7 +302,6 @@ class Details extends React.Component {
 
 
               <Tab>Basket Level</Tab>
-              ): null}
 
             </TabList>
 

@@ -59,13 +59,13 @@ class UploadFile extends Component {
             <form action="" method="get" className=" w-100 p-4">
               <div className="mb-3 ">
                 <label htmlFor="data" className="form-label">
-                  {" "}
+                   
                   اختر البيانات المراد تصنيفها :
                 </label>
                 <select className="form-select form-select-sm text-end">
                   <option defaultValue disabled>
-                    {" "}
-                    اختر من القائمة{" "}
+                     
+                    اختر من القائمة 
                   </option>
                   <option value="1">بيانات شهر رمضان 02/4/2022</option>
                   <option value="2"> بيانات شهر شوال 02/5/2022</option>
@@ -174,7 +174,7 @@ class UploadFile extends Component {
                     type="button"
                     className="btn actionButton btn-main w-50"
                   >
-                    تنفيذ العملية{" "}
+                    تنفيذ العملية 
                   </button>
                 </div>
               </div>

@@ -45,7 +45,7 @@ class Order_volum extends React.Component {
 
   static getDerivedStateFromProps(props, state) {
     let data = props.daily_orders;
-
+    
     return {
       series: [
         {

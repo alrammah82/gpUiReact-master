@@ -125,8 +125,8 @@ class Data extends React.Component {
                           htmlFor="exampleFormControlInput1"
                           className="form-label"
                         >
-                          {" "}
-                          اسم للبيانات(اختياري){" "}
+                           
+                          اسم للبيانات(اختياري) 
                         </label>
                         <input
                           className="form-control"
@@ -139,8 +139,8 @@ class Data extends React.Component {
                           htmlFor="exampleFormControlInput1"
                           className="form-label"
                         >
-                          {" "}
-                          تاريخ البداية{" "}
+                           
+                          تاريخ البداية 
                         </label>
                         <input
                           className="form-control"
@@ -152,8 +152,8 @@ class Data extends React.Component {
                           htmlFor="exampleFormControlInput1"
                           className="form-label"
                         >
-                          {" "}
-                          تاريخ النهاية{" "}
+                           
+                          تاريخ النهاية 
                         </label>
                         <input
                           className="form-control"
@@ -167,15 +167,15 @@ class Data extends React.Component {
                         type="button"
                         className="btn actionButton btn-main"
                       >
-                        {" "}
-                        تأكيد الطلب{" "}
+                         
+                        تأكيد الطلب 
                       </button>
                       <button
                         type="button"
                         className="btn btn-secondary"
                         data-bs-dismiss="modal"
                       >
-                        إغلاق{" "}
+                        إغلاق 
                       </button>
                     </div>
                   </div>
@@ -200,13 +200,13 @@ class Data extends React.Component {
                   <td>02-04-2022 </td>
                   <td>03-04-2020</td>
                   <td>
-                    {" "}
+                     
                     <a href="#" className="downlode">
-                      {" "}
+                       
                       <ion-icon name="arrow-down-circle"></ion-icon>
                     </a>
                     <a href="#" className="downlode">
-                      {" "}
+                       
                       <ion-icon
                         name="trash-outline"
                         className="text-danger"
@@ -220,13 +220,13 @@ class Data extends React.Component {
                   <td>04-04-2022 </td>
                   <td>05-04-2020 </td>
                   <td>
-                    {" "}
+                     
                     <a href="#" className="downlode">
-                      {" "}
+                       
                       <ion-icon name="arrow-down-circle"></ion-icon>
                     </a>
                     <a href="#" className="downlode">
-                      {" "}
+                       
                       <ion-icon
                         name="trash-outline"
                         className="text-danger"

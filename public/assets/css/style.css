@@ -248,7 +248,7 @@ font-size: 1.75em;
     width:100% ;
     padding: 15px;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-gap:15px;
 }   
 .cardBox .cardInternal{

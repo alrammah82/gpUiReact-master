@@ -1,10 +1,8 @@
 import React from "react";
 import Chart from "react-apexcharts";
 class ChartClients extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
+  
+    state = {
       series_Ganaral: [44, 33, 54],
 
       options_Ganaral: {
@@ -84,8 +82,6 @@ class ChartClients extends React.Component {
         ],
       },
     };
-  }
-
   render() {
     return (
       <div className="row  m-4">

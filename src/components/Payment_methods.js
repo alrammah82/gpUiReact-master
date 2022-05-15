@@ -54,7 +54,6 @@ class Payment_methods extends React.Component {
       <div>
         {this.state.showComponent ? (
       <div id="chart">
-        <h1>Payment Methods</h1>
         <Chart
           options={this.state.options}
           series={this.state.series}

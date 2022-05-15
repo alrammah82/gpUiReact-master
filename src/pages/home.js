@@ -68,7 +68,7 @@ class Home extends React.Component {
               <div className="cardHeader">
                 <h2>البيانات الحديثة</h2>
                 <a href="#" className="actionButton btn-main">
-                  استعراض الكل{" "}
+                  استعراض الكل 
                 </a>
               </div>
               <table className="mainTable">
@@ -88,22 +88,22 @@ class Home extends React.Component {
                     <td>02-04-2022 </td>
                     <td>03-04-2020</td>
                     <td>
-                      {" "}
+                       
                       <span className="status done">تمت المعالجة </span>
                     </td>
                     <td>
-                      {" "}
+                       
                       <a href="#" className="downlode">
-                        {" "}
+                         
                         <ion-icon name="laptop-outline"></ion-icon>
-                      </a>{" "}
+                      </a> 
                     </td>
                     <td>
-                      {" "}
+                       
                       <a href="#" className="downlode">
-                        {" "}
+                         
                         <ion-icon name="arrow-down-circle"></ion-icon>
-                      </a>{" "}
+                      </a> 
                     </td>
                   </tr>
                   <tr>
@@ -111,22 +111,22 @@ class Home extends React.Component {
                     <td>04-04-2022 </td>
                     <td>05-04-2020 </td>
                     <td>
-                      {" "}
+                       
                       <span className="status progress">جاري المعالجة</span>
                     </td>
                     <td>
-                      {" "}
+                       
                       <a href="#" className="downlode">
-                        {" "}
+                         
                         <ion-icon name="laptop-outline"></ion-icon>
-                      </a>{" "}
+                      </a> 
                     </td>
                     <td>
-                      {" "}
+                       
                       <a href="#" className="downlode">
-                        {" "}
+                         
                         <ion-icon name="arrow-down-circle"></ion-icon>
-                      </a>{" "}
+                      </a> 
                     </td>
                   </tr>
 
@@ -135,22 +135,22 @@ class Home extends React.Component {
                     <td>06-04-2022</td>
                     <td>07-04-2020 </td>
                     <td>
-                      {" "}
+                       
                       <span className="status   notstart">لم يتم البدء </span>
                     </td>
                     <td>
-                      {" "}
+                       
                       <a href="#" className="downlode">
-                        {" "}
+                         
                         <ion-icon name="laptop-outline"></ion-icon>
-                      </a>{" "}
+                      </a> 
                     </td>
                     <td>
-                      {" "}
+                       
                       <a href="#" className="downlode">
-                        {" "}
+                         
                         <ion-icon name="arrow-down-circle"></ion-icon>
-                      </a>{" "}
+                      </a> 
                     </td>
                   </tr>
                 </tbody>

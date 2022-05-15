@@ -13,25 +13,20 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import LandingPage from './pages/landing_page';
+import Header from './components/header';
 
 function App() {
    
   return  (
 <BrowserRouter>
-  <Nav/>  
-
+<Header />
     <Routes>
-      <Route path="/Home" element={<Home />}> </Route>
+      <Route path="/Home" element={<LandingPage />}> </Route>
 
-      <Route path="/store" element={<Store />}/>
-    <Route path="/data" element={<Data />}/>
-      <Route path="/analysis" element={<Analysis />}/>
-      <Route path="/resluts" element={<Resluts />}/>
-      <Route path="/details" element={<Details />}/>
-  </Routes>
-  <Routes>
-          <Route path="/" element={<Details />}> </Route>
+          <Route path="/"  element={<LandingPage />}> </Route>
 
+      <Route path="/details" element={<Details test={"hi"}/>}/>
   </Routes>
 </BrowserRouter>
 

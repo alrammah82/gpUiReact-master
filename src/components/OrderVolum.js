@@ -1,9 +1,10 @@
 import React from "react";
 import Chart from "react-apexcharts";
-class Sales_volum extends React.Component {
+class OrderVolum extends React.Component {
+
+
   state = {
     series: null,
-
     options: {
       chart: {
         id: "area-datetime",
@@ -32,7 +33,7 @@ class Sales_volum extends React.Component {
         type: "datetime",
       },
       title: {
-        text: "Sales Volum",
+        text: "Orders Volum",
       },
       tooltip: {
         x: {
@@ -43,17 +44,19 @@ class Sales_volum extends React.Component {
   };
 
   static getDerivedStateFromProps(props, state) {
-    let data = props.daily_sales;
+    let data = props.daily_orders;
+    
     return {
       series: [
         {
-          name: "Sales",
+          name: "Orders Volum",
           data: data,
         },
       ],
-      showComponent: data != null ? true : false,
+      showComponent: data!=null?true:false,
     };
   }
+
   render() {
     return (
       <div>
@@ -71,4 +74,4 @@ class Sales_volum extends React.Component {
     );
   }
 }
-export default Sales_volum;
+export default OrderVolum;

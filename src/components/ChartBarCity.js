@@ -1,7 +1,9 @@
 import React from "react";
 import Chart from "react-apexcharts";
-class ChartBar_city extends React.Component {
+class ChartBarCity extends React.Component {
 
+
+  state = {}
 static getDerivedStateFromProps(props, state) {
 
   return{
@@ -30,4 +32,4 @@ static getDerivedStateFromProps(props, state) {
     );
   }
 }
-export default ChartBar_city;
+export default ChartBarCity;

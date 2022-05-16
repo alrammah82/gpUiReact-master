@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
-class Payment_methods extends React.Component {
+class PaymentMethods extends React.Component {
   state = {
     series: [],
 
@@ -66,4 +66,4 @@ class Payment_methods extends React.Component {
     );
   }
 }
-export default Payment_methods;
+export default PaymentMethods;

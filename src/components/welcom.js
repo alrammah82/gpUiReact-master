@@ -16,9 +16,8 @@ function welcom() {
                 Data Mining For <em>E-commrce</em>
               </h1>
               <p>
-                Develop your store by knowing the types of your customers and
-                their activity, knowing the baskets and relationships between
-                the items in the basket with details, your profit faster
+              Know the types of your customers, 
+               items relationships, and many more DETAILS from your sales file.
               </p>
             </div>
           </div>

@@ -150,7 +150,7 @@ class Landing_page extends React.Component {
                
               <h1 className="m-4 w-100 text-center">
                  
-                what is progress? 
+                What Is The Progress? 
               </h1> 
             </div>
 
